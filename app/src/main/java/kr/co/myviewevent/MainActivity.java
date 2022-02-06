@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onTouchEvent(MotionEvent event) {
+            Log.i("MyViewEvent","onTouchEvent");
             x = (int) event.getX(0);
             y = (int) event.getY(0);
             invalidate();
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
+            Log.i("MyViewEvent","onDraw");
 
             Paint paint = new Paint();
             paint.setTextSize(50);
